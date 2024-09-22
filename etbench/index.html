@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Video-Language Understanding, Large Language Models">
+  <meta name="description" content="E.T. Bench is a large-scale benchmark for event-level and time-sensitive video-language understanding.">
+
+  <title>E.T. Bench: Towards Open-Ended Event-Level Video-Language Understanding</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRWZX3L0HC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-JRWZX3L0HC');
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/nunito@5.0.18/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/fontawesome.min.css">
+  <link rel="stylesheet" href="vendor/image-zoom.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="assets/icon.png">
+
+  <script async src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/js/all.min.js"></script>
+  <script async src="vendor/image-zoom.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h1 class="title publication-title is-bold">
+            <img src="assets/icon.png" alt="logo">
+            <span>E.T. Bench: Towards Open-Ended Event-Level Video-Language Understanding</span>
+          </h1>
+          <div class="is-size-5 publication-author">
+            <span class="author-block">
+              <a href="https://yeliu.dev/" target="_blank">Ye Liu</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=qtdueToAAAAJ" target="_blank">Zongyang Ma</a><sup>2,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=zJvrrusAAAAJ" target="_blank">Zhongang Qi</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=T-HaQ84AAAAJ" target="_blank">Yang Wu</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ" target="_blank">Ying Shan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://web.comp.polyu.edu.hk/chencw/" target="_blank">Chang Wen Chen</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-institution">
+            <span class="author-block"><sup>1</sup>The Hong Kong Polytechnic University</span>
+            <span class="author-block"><sup>2</sup>ARC Lab, Tencent PCG</span>
+            <span class="author-block"><sup>3</sup>Institute of Automation, Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>4</sup>Tencent AI Lab</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a class="button is-normal is-rounded is-dark" href="/" target="_blank">
+                  <i class="button-icon far fa-paper-plane"></i>
+                  <span>Coming Soon</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section statistics">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Tasks</p>
+                <p class="title statistics-number">12</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Samples</p>
+                <p class="title statistics-number">7.3K</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Domains</p>
+                <p class="title statistics-number">8</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Videos</p>
+                <p class="title statistics-number">7K</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Total Duration</p>
+                <p class="title statistics-number">251.4h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>Recent advances in Video Large Language Models (Video-LLMs) have demonstrated their great potential in general-purpose video understanding. To verify the significance of these models, a number of benchmarks have been proposed to diagnose their capabilities in different scenarios. However, existing benchmarks merely evaluate models through video-level question-answering, lacking fine-grained event-level assessment and task diversity.</p>
+            <p>To fill this gap, we introduce E.T. Bench (Event-Level & Time-Sensitive Video Understanding Benchmark), a large-scale and high-quality benchmark for open-ended event-level video understanding. Categorized within a 3-level task taxonomy, E.T. Bench encompasses 7.3K samples under 12 tasks with 7K videos (251.4h total length) under 8 domains, providing comprehensive evaluations. We extensively evaluated 8 Image-LLMs and 12 Video-LLMs on our benchmark, and the results reveal that state-of-the-art models for coarse-level (video-level) understanding struggle to solve our fine-grained tasks, e.g., grounding event-of-interests within videos, largely due to the short video context length, improper time representations, and lack of multi-event training data.</p>
+            <p>Focusing on these issues, we further propose a strong baseline model, E.T. Chat, together with an instruction-tuning dataset E.T. Instruct 164K tailored for fine-grained event-level understanding. Our simple but effective solution demonstrates superior performance in multiple scenarios.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Task Definitions</h2>
+          <img src="figures/task.jpg" alt="Task Definitions" data-zoom-image />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Generation Pipeline</h2>
+          <img src="figures/pipeline.jpg" alt="Generation Pipeline" data-zoom-image />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title">Benchmark Statistics</h3>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="figures/comparison.jpg" alt="Benchmark Comparison" data-zoom-image />
+          <div class="caption">Comparison with Existing Video-LLM Benchmarks</div>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-fifths">
+          <img src="figures/taxonomy.jpg" alt="Task Taxonomy" data-zoom-image />
+          <div class="caption">Task Taxonomy and Sample Distribution</div>
+        </div>
+        <div class="column is-two-fifths">
+          <img src="figures/wordcloud.jpg" alt="Word Cloud" data-zoom-image />
+          <div class="caption">Word Cloud of Text Queries</div>
+          <img src="figures/duration.jpg" alt="Video Duration" data-zoom-image />
+          <div class="caption">Distribution of Video Duration (seconds)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Our Method</h2>
+          <img src="figures/model.jpg" alt="Our Method" data-zoom-image />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Evaluation Results</h2>
+          <img src="figures/evaluation.jpg" alt="Evaluation Results" data-zoom-image />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title">Visualizations</h3>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <ul class="masonry">
+            <img class="masonry-item" src="figures/tvg.jpg" alt="TVG" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/rvq.jpg" alt="RVQ" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/gvq.jpg" alt="GVQ" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/evs.jpg" alt="EVS" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/rar.jpg" alt="RAR" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/tal.jpg" alt="TAL" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/epm.jpg" alt="EPM" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/dvc.jpg" alt="DVC" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/vhd.jpg" alt="VHD" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/slc.jpg" alt="SLC" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/eca.jpg" alt="ECA" style="border-radius: 7px" data-zoom-image />
+            <img class="masonry-item" src="figures/tem.jpg" alt="TEM" style="border-radius: 7px" data-zoom-image />
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title">Citation</h3>
+          <div class="caption">Please kindly cite our paper if you find this project helpful.</div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <pre><code>@article{liu2024etbench,<br>  title={E.T. Bench: Towards Open-Ended Event-Level Video-Language Understanding},<br>  author={Liu, Ye and Ma, Zongyang and Qi, Zhongang and Wu, Yang and Chen, Chang Wen and Shan, Ying},<br>  journal={Tech Report},<br>  year={2024}<br>}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <p>This website is modified from <a href="https://nerfies.github.io/" target="_blank">Nerfies's Project Page</a>. Source code is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
